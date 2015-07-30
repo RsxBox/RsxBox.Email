@@ -10,13 +10,12 @@ namespace RsxBox.Email.Utilities
     {
         public static IEnumerable<PropertyInfo> GetProperties(Type t, Type attribute)
         {
-            /*
+            
             IEnumerable<PropertyInfo> props = t.GetProperties().Where(
                 prop => Attribute.IsDefined(prop, attribute));
 
-            return props; */
-            throw new NotImplementedException();
-            //return t.GetProperties().AsEnumerable<PropertyInfo>();
+            return props; 
+            
         }
     }
 }

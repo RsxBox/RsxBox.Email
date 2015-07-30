@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace RsxBox.Email.Core.InMemory
 {
-    public class InMemoryEmailManager<TEmailTemplate> : IEmailSender<TEmailTemplate>
+    public class InMemoryEmailSender<TEmailTemplate> : IEmailSender<TEmailTemplate>
         where TEmailTemplate : EmailTemplate
     {
         SmtpClient client;
-        public InMemoryEmailManager(SmtpClient client)
+        public InMemoryEmailSender(SmtpClient client)
         {
             this.client = client;
         }

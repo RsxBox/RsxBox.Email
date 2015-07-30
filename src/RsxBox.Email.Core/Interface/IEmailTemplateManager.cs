@@ -12,6 +12,7 @@ namespace RsxBox.Email.Core.Interface
     {
         IEnumerable<TEmailTemplate> GetAllTemplates(int offset, int size);
         TEmailTemplate GetTemplate(TPkType emailTemplatePk);
+        TEmailTemplate CreateTemplate(TEmailTemplate template);
         TEmailTemplate UpdateTemplate(TEmailTemplate modifiedTemplate);
         void DeleteTemplate(TPkType emailTemplatePk); 
 

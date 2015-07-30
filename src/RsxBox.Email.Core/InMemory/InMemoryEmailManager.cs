@@ -46,5 +46,10 @@ namespace RsxBox.Email.Core.InMemory
         {
             return templateManager.UpdateTemplate(modifiedTemplate);
         }
+
+        public EmailTemplate CreateTemplate(EmailTemplate template)
+        {
+            return templateManager.CreateTemplate(template);
+        }
     }
 }

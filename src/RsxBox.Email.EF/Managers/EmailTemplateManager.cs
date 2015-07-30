@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.Entity;
-using RsxBox.Email.Core;
 using RsxBox.Email.Core.Interface;
 using RsxBox.Email.Core.Models;
 using RsxBox.Email.Utilities;
@@ -8,7 +7,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace RsxBox.Email.EF.Managers
 {
@@ -57,7 +55,17 @@ namespace RsxBox.Email.EF.Managers
         {
             var entity = GetTemplate(pkSelector.Compile().Invoke(modifiedTemplate));
 
-            throw new NotImplementedException();
+            repository.Entry(entity).Context.Update(modifiedTemplate);
+            repository.SaveChanges();
+            return entity;
+            
+        }
+
+        public TEmailTemplate CreateTemplate(TEmailTemplate template)
+        {
+            dbSet.Add(template);
+            repository.SaveChanges();
+            return template;
         }
     }
 }

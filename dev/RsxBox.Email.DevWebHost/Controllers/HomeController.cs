@@ -1,17 +1,19 @@
-﻿using System;
+﻿using Microsoft.AspNet.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Threading.Tasks;
 
-namespace RsxBox.Email.DevWebHost.Controllers
+
+// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace RsxBox.Email.DevWebHost
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        // GET: /<controller>/
+        public IActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
     }

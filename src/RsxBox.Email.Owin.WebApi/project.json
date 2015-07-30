@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "",
   "authors": [ "" ],
@@ -7,17 +7,13 @@
   "licenseUrl": "",
 
   "dependencies": {
+    "RsxBox.Email.Core.Models": "1.0.0-*",
+    "RsxBox.Email.Core": "1.0.0-*",
+    "Microsoft.AspNet.Http.Abstractions": "1.0.0-beta6",
+    "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-beta6"
   },
 
-  "frameworks" : {
-    "dnx451": { },
-    "dnxcore50" : {
-      "dependencies": {
-        "System.Collections": "4.0.10-beta-22816",
-        "System.Linq": "4.0.0-beta-22816",
-        "System.Threading": "4.0.10-beta-22816",
-        "Microsoft.CSharp": "4.0.0-beta-22816"
-      }
-    }
+  "frameworks": {
+    "dnx451": { }
   }
 }
